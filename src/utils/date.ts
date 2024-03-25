@@ -17,7 +17,7 @@ export type TDateFormat =
  */
 export const formatDate = (
   date: string | Date,
-  format: TDateFormat = "MM/DD/YYYY"
+  format: TDateFormat = "MM/DD/YYYY",
 ): string => {
   if (!date || !dayjs(date).isValid()) {
     return "";

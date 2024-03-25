@@ -8,7 +8,7 @@ import { isEqual } from "lodash";
 export const uniqueArray = <T = unknown>(array: Array<T>) => {
   return array.reduce((acc: Array<T>, item: T) => {
     const isAccumulatorContainsItem = acc?.some((accItem) =>
-      isEqual(accItem, item)
+      isEqual(accItem, item),
     );
 
     if (!isAccumulatorContainsItem) {
@@ -27,7 +27,7 @@ export const uniqueArray = <T = unknown>(array: Array<T>) => {
  */
 export const compareArray = (
   firstArray: Array<unknown>,
-  secondArray: Array<unknown>
+  secondArray: Array<unknown>,
 ) => {
   if (!firstArray || !secondArray || firstArray.length !== secondArray.length) {
     return false;
@@ -35,7 +35,7 @@ export const compareArray = (
 
   return firstArray.every((itemInFirstArray) => {
     return secondArray.some((itemInSecondArray) =>
-      isEqual(itemInSecondArray, itemInFirstArray)
+      isEqual(itemInSecondArray, itemInFirstArray),
     );
   });
 };
@@ -47,7 +47,7 @@ export const compareArray = (
  */
 export const isIntersection = <T>(
   firstArray: Array<T>,
-  secondArray: Array<T>
+  secondArray: Array<T>,
 ): boolean => {
   if (
     !firstArray?.length ||
@@ -60,7 +60,7 @@ export const isIntersection = <T>(
 
   return firstArray.some((itemInFirstArray) => {
     return secondArray.some((itemInSecondArray) =>
-      isEqual(itemInFirstArray, itemInSecondArray)
+      isEqual(itemInFirstArray, itemInSecondArray),
     );
   });
 };

@@ -18,7 +18,7 @@ type OriginalStyle = {
 };
 
 export const useScrollLock = (
-  options: UseScrollLockOptions = {}
+  options: UseScrollLockOptions = {},
 ): UseScrollLockReturn => {
   const { autoLock = true, lockTarget, widthReflow = true } = options;
   const [isLocked, setIsLocked] = useState(false);

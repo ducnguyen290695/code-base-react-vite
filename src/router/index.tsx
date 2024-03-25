@@ -38,7 +38,7 @@ const AppRouter = () => {
                         Component: ChildComponent,
                         props: childProps,
                       },
-                      childIndex
+                      childIndex,
                     ) => (
                       <Route
                         key={childIndex}
@@ -49,7 +49,7 @@ const AppRouter = () => {
                           </Suspense>
                         }
                       />
-                    )
+                    ),
                   )}
                 </Route>
               </PrivateRoute>
@@ -67,7 +67,7 @@ const AppRouter = () => {
               }
             />
           );
-        }
+        },
       )}
     </Routes>
   );

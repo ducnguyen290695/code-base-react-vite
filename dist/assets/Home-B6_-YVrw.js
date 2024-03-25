@@ -1,1 +1,0 @@
-import{j as e}from"./index-DxheSpdR.js";const s=()=>e.jsx("div",{className:"flex items-center justify-center w-[100vw] h-[100vh]",children:e.jsx("h1",{className:"text-3xl font-bold",children:"Home Page"})});export{s as default};
